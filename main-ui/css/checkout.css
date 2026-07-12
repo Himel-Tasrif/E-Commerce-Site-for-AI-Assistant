@@ -1,0 +1,230 @@
+/* Checkout layout */
+.checkout-page {
+  padding: calc(var(--header-height) + 2rem) 0 4rem;
+  background: var(--color-gray-50);
+  min-height: 100vh;
+}
+
+.checkout-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1.4fr 0.9fr;
+    align-items: start;
+  }
+}
+
+.checkout-title {
+  font-family: var(--font-family-display);
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+}
+
+.checkout-panel {
+  background: #fff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.checkout-panel-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--color-primary);
+}
+
+.checkout-panel-sub {
+  color: var(--color-gray-500);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkout-form .form-label {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.checkout-form .btn {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.auth-tab {
+  border: 1px solid var(--color-gray-300);
+  background: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--color-gray-600);
+}
+
+.auth-tab.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.auth-signed-in {
+  padding: 0.75rem 0;
+}
+
+.card-brands {
+  border: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.card-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+  margin-top: 0.75rem;
+}
+
+.checkout-summary {
+  background: #fff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  position: sticky;
+  top: calc(var(--header-height) + 1rem);
+}
+
+.summary-line {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-gray-100);
+  font-size: 0.9rem;
+}
+
+.summary-line img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--color-gray-100);
+}
+
+.summary-line p {
+  margin: 0;
+  color: var(--color-gray-500);
+  font-size: 0.8rem;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.success-meta {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.success-meta div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-gray-100);
+  font-size: 0.95rem;
+}
+
+.success-meta dt {
+  color: var(--color-gray-500);
+}
+
+.success-meta dd {
+  margin: 0;
+  font-weight: 600;
+  font-family: ui-monospace, monospace;
+  word-break: break-all;
+  text-align: right;
+}
+
+.checkout-step-label {
+  font-size: 0.85rem;
+  color: var(--color-gray-500);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.empty-cart-msg {
+  color: var(--color-gray-500);
+}
+
+.reserve-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.15rem;
+  background: #fff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+}
+.reserve-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.reserve-meta span {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.reserve-meta strong { font-size: 0.95rem; }
+.reserve-meta .mono,
+.success-meta .mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.muted-line {
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+  margin: 0.15rem 0 0;
+}
+@media (max-width: 640px) {
+  .reserve-meta { grid-template-columns: 1fr; }
+}

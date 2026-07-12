@@ -1,0 +1,193 @@
+/* ==========================================================================
+   STRIDE — Hero (full-bleed visual plane)
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: var(--header-height);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(13, 148, 136, 0.18) 0%, transparent 55%),
+    linear-gradient(160deg, #0b1220 0%, #152033 45%, #1a2f2a 100%);
+  color: var(--color-white);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero-content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: end;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4) var(--space-16);
+}
+
+@media (min-width: 992px) {
+  .hero-inner {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-8);
+    padding: var(--space-16) var(--space-4) var(--space-20);
+  }
+}
+
+.hero-text {
+  max-width: 560px;
+  padding-bottom: var(--space-8);
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-6);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.hero-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-weight: var(--font-weight-black);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: var(--space-6);
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.hero-title br {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero-title br {
+    display: block;
+  }
+}
+
+.hero-description {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: var(--space-8);
+  max-width: 440px;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.hero .btn-primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.hero .btn-primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.hero .btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #fff;
+}
+
+.hero-image {
+  position: relative;
+  margin: 0 calc(-1 * var(--space-4));
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@media (min-width: 992px) {
+  .hero-image {
+    margin: 0;
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.35));
+}
+
+.hero-image-badge {
+  display: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 2;
+  animation: bounce 2s infinite;
+}

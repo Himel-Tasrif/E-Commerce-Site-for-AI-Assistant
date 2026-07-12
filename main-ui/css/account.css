@@ -1,0 +1,152 @@
+.account-page {
+  padding: 2.5rem 0 4rem;
+  max-width: 880px;
+}
+.account-title {
+  font-family: var(--font-display, Syne, sans-serif);
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+.account-lead {
+  color: var(--color-gray-600, #64748b);
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+.account-cus-banner {
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: rgba(13, 148, 136, 0.08);
+  border-left: 3px solid #0d9488;
+}
+.account-cus-banner .mono { font-weight: 700; }
+.account-card {
+  border: 1px solid rgba(11, 18, 32, 0.08);
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.25rem;
+  background: #fff;
+}
+.account-card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+.account-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.account-card-head h2 { margin: 0; }
+.account-dl {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+.account-dl div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.5rem;
+}
+.account-dl dt {
+  color: var(--color-gray-500, #94a3b8);
+  font-size: 0.85rem;
+}
+.account-dl dd { margin: 0; font-weight: 600; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.02em; }
+.account-hint {
+  margin: 1.1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-gray-600, #64748b);
+  line-height: 1.45;
+}
+.account-loading, .account-empty {
+  padding: 2rem 0;
+  color: var(--color-gray-500, #94a3b8);
+}
+.account-alert {
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+}
+.order-row {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(11, 18, 32, 0.06);
+  text-decoration: none;
+  color: inherit;
+}
+.order-row:hover { background: rgba(13, 148, 136, 0.04); }
+.order-row-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.order-row strong { font-size: 1rem; }
+.order-meta {
+  font-size: 0.85rem;
+  color: var(--color-gray-600, #64748b);
+}
+.order-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  background: #f1f5f9;
+  border-radius: 999px;
+}
+.pill-paid { background: #ccfbf1; color: #0f766e; }
+.pill-delivered { background: #dcfce7; color: #166534; }
+.order-items-list { display: grid; gap: 1rem; }
+.order-item-row {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 0.85rem;
+  align-items: center;
+}
+.order-item-row img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  background: #f1f5f9;
+}
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid rgba(13, 148, 136, 0.25);
+}
+.timeline li {
+  position: relative;
+  padding: 0 0 1rem 1.1rem;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0d9488;
+}
+.timeline time {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-gray-500, #94a3b8);
+}
+.header-account-cus {
+  display: block;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: #0d9488;
+  margin-top: 0.15rem;
+}
+@media (max-width: 640px) {
+  .account-dl div { grid-template-columns: 1fr; }
+  .order-item-row { grid-template-columns: 56px 1fr; }
+  .order-item-row span:last-child { grid-column: 2; }
+}

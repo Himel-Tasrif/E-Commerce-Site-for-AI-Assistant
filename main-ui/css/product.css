@@ -1,0 +1,144 @@
+.product-page {
+  padding: calc(var(--header-height) + 2rem) 0 4rem;
+}
+
+.product-breadcrumb {
+  font-size: 0.9rem;
+  color: var(--color-gray-500);
+  margin-bottom: 1.5rem;
+}
+
+.product-breadcrumb a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.product-loading,
+.product-missing {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.product-detail {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .product-detail {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.product-gallery img#product-main-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  background: var(--color-gray-100);
+}
+
+.product-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.product-thumb {
+  width: 72px;
+  height: 72px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-gray-100);
+  cursor: pointer;
+}
+
+.product-thumb.active {
+  border-color: var(--color-accent);
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-brand {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.35rem;
+}
+
+.product-name {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  margin: 0 0 0.35rem;
+  color: var(--color-primary);
+}
+
+.product-category {
+  color: var(--color-gray-500);
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.product-desc {
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.product-field {
+  margin-bottom: 1.25rem;
+}
+
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.size-chip {
+  min-width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.size-chip.selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.product-card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card-title a:hover {
+  color: var(--color-accent);
+}
+
+.product-card-image-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}

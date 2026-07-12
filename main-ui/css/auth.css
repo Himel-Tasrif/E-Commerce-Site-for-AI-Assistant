@@ -1,0 +1,217 @@
+/* Auth pages + header account chip */
+.auth-page {
+  min-height: 100vh;
+  padding: calc(var(--header-height) + 2.5rem) 1rem 3rem;
+  background:
+    radial-gradient(ellipse 70% 50% at 10% 0%, rgba(13, 148, 136, 0.12), transparent 55%),
+    var(--color-gray-50);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+.auth-card h1 {
+  font-family: var(--font-family-display);
+  font-size: 1.6rem;
+  margin: 0 0 0.35rem;
+  color: var(--color-primary);
+}
+
+.auth-card .auth-lead {
+  color: var(--color-gray-500);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth-form .form-label {
+  margin-top: 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.auth-form .btn {
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.auth-footer {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+}
+
+.auth-footer a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.auth-alert {
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.auth-alert-error {
+  background: var(--color-error-light);
+  color: var(--color-error);
+}
+
+.auth-alert-success {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.auth-hint {
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+  margin-top: 0.75rem;
+}
+
+/* Header account */
+.header-account {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-account-signin {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-300);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.header-account-signin:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.header-account-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 36px;
+  padding: 0 0.55rem 0 0.35rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.header-account-trigger:hover {
+  border-color: var(--color-accent);
+}
+
+.header-account-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.header-account-name {
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header-account-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 240px;
+  background: #fff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-dropdown);
+  padding: 0.5rem;
+}
+
+.header-account-menu-head {
+  padding: 0.65rem 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--color-gray-100);
+  margin-bottom: 0.35rem;
+}
+
+.header-account-menu-head strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.header-account-menu-head span {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  word-break: break-all;
+}
+
+.header-account-menu-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border: 0;
+  background: transparent;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-account-menu-item:hover {
+  background: var(--color-gray-50);
+}
+
+.header-account-menu-item.danger {
+  color: var(--color-error);
+}
+
+.checkout-user-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: var(--color-accent-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.checkout-user-bar strong {
+  color: var(--color-primary);
+}
