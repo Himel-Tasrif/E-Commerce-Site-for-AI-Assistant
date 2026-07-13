@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Stride</title>
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      <nav class="header-nav" aria-label="Checkout">
+        <span class="checkout-step-label">Secure checkout</span>
+      </nav>
+      <div class="header-actions">
+        <a href="shop.html" class="btn btn-ghost btn-sm">Continue shopping</a>
+        <div id="header-account" class="header-account"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="checkout-page">
+    <div class="container checkout-layout">
+      <section class="checkout-main" aria-labelledby="checkout-title">
+        <h1 id="checkout-title" class="checkout-title">Payment</h1>
+
+        <div class="checkout-user-bar" id="checkout-user-bar">
+          <span>Paying as <strong id="pay-as-name"></strong></span>
+          <span id="pay-as-email" style="color: var(--color-gray-500); font-size: 0.85rem;"></span>
+        </div>
+
+        <div class="reserve-meta" id="reserve-meta" aria-live="polite"></div>
+
+        <div class="checkout-panel" id="panel-expired" hidden>
+          <h2 class="checkout-panel-title">Session expired</h2>
+          <p>This checkout session has expired.</p>
+          <p class="form-hint">Stock is no longer reserved. Return to your cart or ask the assistant for a new checkout link.</p>
+          <a href="shop.html" class="btn btn-primary">Back to shop</a>
+        </div>
+
+        <div class="checkout-panel" id="panel-payment">
+          <h2 class="checkout-panel-title">Payment</h2>
+          <p class="checkout-panel-sub">Dummy payment — totals come from the reserved server session, not your browser cart.</p>
+
+          <form id="payment-form" class="checkout-form">
+            <label class="form-label" for="pay-phone">Phone (for order verification)</label>
+            <input class="form-input" id="pay-phone" type="tel" required placeholder="01XXXXXXXXX">
+
+            <fieldset class="card-brands">
+              <legend class="form-label">Card type</legend>
+              <label class="card-brand"><input type="radio" name="card-brand" value="visa" checked> Visa</label>
+              <label class="card-brand"><input type="radio" name="card-brand" value="mastercard"> Mastercard</label>
+              <label class="card-brand"><input type="radio" name="card-brand" value="amex"> Amex</label>
+            </fieldset>
+
+            <label class="form-label" for="card-number">Card number</label>
+            <input class="form-input" id="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" required>
+
+            <div class="form-row-2">
+              <div>
+                <label class="form-label" for="card-exp">Expiry</label>
+                <input class="form-input" id="card-exp" placeholder="MM/YY" autocomplete="cc-exp" required>
+              </div>
+              <div>
+                <label class="form-label" for="card-cvc">CVC</label>
+                <input class="form-input" id="card-cvc" placeholder="123" autocomplete="cc-csc" required>
+              </div>
+            </div>
+
+            <label class="form-label" for="card-name">Name on card</label>
+            <input class="form-input" id="card-name" autocomplete="cc-name" required>
+
+            <button type="submit" class="btn btn-primary btn-lg" id="pay-btn">Confirm Payment</button>
+            <p class="form-hint">Card details are only used by the local dummy gateway and are never sent to the commerce server.</p>
+          </form>
+        </div>
+
+        <div class="checkout-panel success-panel" id="panel-success" hidden>
+          <h2 class="checkout-panel-title">Order confirmed</h2>
+          <p>Your payment has been confirmed successfully.</p>
+          <p>Your order has been placed successfully.</p>
+          <dl class="success-meta">
+            <div><dt>Order</dt><dd id="success-order"></dd></div>
+            <div><dt>Customer ID</dt><dd id="success-customer" class="mono"></dd></div>
+            <div><dt>Transaction ID</dt><dd id="success-txn"></dd></div>
+            <div><dt>Invoice</dt><dd id="success-invoice"></dd></div>
+            <div><dt>Payment</dt><dd id="success-payment"></dd></div>
+            <div><dt>Delivery</dt><dd id="success-fulfillment"></dd></div>
+          </dl>
+          <p id="success-delivery-msg" class="form-hint"></p>
+          <p id="success-support-msg" class="form-hint"></p>
+          <a href="orders.html" class="btn btn-primary">View my orders</a>
+          <a href="shop.html" class="btn btn-ghost">Back to shop</a>
+        </div>
+      </section>
+
+      <aside class="checkout-summary" aria-labelledby="summary-title">
+        <h2 id="summary-title" class="checkout-panel-title">Order summary</h2>
+        <div id="summary-items"></div>
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="summary-total">—</strong>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script type="module" src="js/checkout.js"></script>
+</body>
+</html>
