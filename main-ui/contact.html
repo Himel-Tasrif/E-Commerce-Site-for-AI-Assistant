@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Stride - Get in touch with our customer support team, find store locations, or send us a message.">
+  <meta name="theme-color" content="#1a1a1a">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us | Stride">
+  <meta property="og:description" content="Get in touch with our customer support team, find store locations, or send us a message.">
+  <meta property="og:image" content="images/og-contact.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us | Stride">
+  <meta name="twitter:description" content="Get in touch with our customer support team, find store locations, or send us a message.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  
+  <!-- CSS - Modular Architecture -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/product-grid.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/newsletter.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/pages.css">
+  
+  <title>Contact Us | Stride</title>
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="header" id="header" role="banner">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="header-nav-link">Home</a>
+        <a href="shop.html" class="header-nav-link">Shop</a>
+        <a href="shop.html?category=men" class="header-nav-link">Men</a>
+        <a href="shop.html?category=women" class="header-nav-link">Women</a>
+        <a href="shop.html?category=kids" class="header-nav-link">Kids</a>
+        <a href="shop.html?category=sale" class="header-nav-link">Sale</a>
+        <a href="about.html" class="header-nav-link">About</a>
+        <a href="contact.html" class="header-nav-link active" aria-current="page">Contact</a>
+      </nav>
+      
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="header-action-btn" aria-label="Search products" id="search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </button>
+        
+        <button class="header-action-btn" aria-label="User account" id="account-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+        </button>
+        
+        <button class="header-action-btn" aria-label="Shopping cart" id="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          <span class="header-cart-count" id="cart-count" aria-label="0 items in cart">0</span>
+        </button>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="mobile-menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon" style="display: none;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <nav class="mobile-menu-nav">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+        <a href="shop.html" class="mobile-menu-link">Shop</a>
+        <a href="shop.html?category=men" class="mobile-menu-link">Men</a>
+        <a href="shop.html?category=women" class="mobile-menu-link">Women</a>
+        <a href="shop.html?category=kids" class="mobile-menu-link">Kids</a>
+        <a href="shop.html?category=sale" class="mobile-menu-link">Sale</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="contact.html" class="mobile-menu-link active" aria-current="page">Contact</a>
+      </nav>
+      <div class="mobile-menu-divider"></div>
+      <div class="mobile-menu-actions">
+        <button class="btn btn-secondary" style="flex: 1;">Sign In</button>
+        <button class="btn btn-primary" style="flex: 1;">Create Account</button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+    <div class="modal" style="max-width: 600px;">
+      <div class="modal-header">
+        <h2 id="search-modal-title" class="modal-title">Search Products</h2>
+        <button class="modal-close" aria-label="Close search" id="search-close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="search-form" id="search-form" role="search">
+          <div class="form-group">
+            <label for="search-input" class="sr-only">Search products</label>
+            <div style="position: relative;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--color-gray-400); pointer-events: none;" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+              <input 
+                type="search" 
+                id="search-input" 
+                class="form-input" 
+                placeholder="Search for shoes, sneakers, running..."
+                style="padding-left: 48px;"
+                autocomplete="off"
+                aria-label="Search products"
+              >
+            </div>
+          </div>
+        </form>
+        <div class="search-suggestions" id="search-suggestions" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cart-sidebar" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-sidebar-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar-content">
+      <div class="cart-header">
+        <h2 id="cart-title" class="cart-title">Shopping Cart</h2>
+        <button class="cart-close" aria-label="Close cart" id="cart-close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="cart-body" id="cart-body">
+        <div class="cart-empty" id="cart-empty">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" style="width: 64px; height: 64px; margin-bottom: 1rem; color: var(--color-gray-300);">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          <p>Your cart is empty</p>
+          <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+        </div>
+        <div class="cart-items" id="cart-items" style="display: none;"></div>
+      </div>
+      <div class="cart-footer" id="cart-footer" style="display: none;">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-shipping">
+          <span>Shipping</span>
+          <span>Calculated at checkout</span>
+        </div>
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
+        <a href="shop.html" class="btn btn-secondary btn-block">Continue Shopping</a>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-label="Notifications"></div>
+  
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Contact Hero -->
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="container">
+        <div class="contact-hero-content">
+          <h1 id="contact-hero-title" class="contact-hero-title">Contact Us</h1>
+          <p class="contact-hero-subtitle">We'd love to hear from you. Get in touch with our team.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Methods -->
+    <section class="contact-methods" aria-labelledby="contact-methods-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contact-methods-title" class="section-title">How Can We Help?</h2>
+          <p class="section-subtitle">Choose the best way to reach us</p>
+        </header>
+        <div class="contact-methods-grid">
+          <article class="contact-method-card">
+            <div class="contact-method-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+            </div>
+            <h3 class="contact-method-title">Email Us</h3>
+            <p class="contact-method-description">Send us a message and we'll respond within 24 hours.</p>
+            <a href="mailto:support@Stride.com" class="contact-method-link">support@Stride.com</a>
+            <a href="mailto:orders@Stride.com" class="contact-method-link">orders@Stride.com</a>
+            <a href="mailto:press@Stride.com" class="contact-method-link">press@Stride.com</a>
+          </article>
+          
+          <article class="contact-method-card">
+            <div class="contact-method-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.061 12.061 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+            </div>
+            <h3 class="contact-method-title">Call Us</h3>
+            <p class="contact-method-description">Speak with a specialist Monday-Friday, 8am-8pm EST.</p>
+            <a href="tel:+18005550199" class="contact-method-link">1-800-555-0199</a>
+            <a href="tel:+18005550198" class="contact-method-link">1-800-555-0198 (Orders)</a>
+            <p class="contact-method-hours">Mon-Fri: 8am-8pm EST<br>Sat-Sun: 9am-6pm EST</p>
+          </article>
+          
+          <article class="contact-method-card">
+            <div class="contact-method-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+            </div>
+            <h3 class="contact-method-title">Visit a Store</h3>
+            <p class="contact-method-description">Find a Stride store near you for fittings and pickups.</p>
+            <a href="stores.html" class="contact-method-link">Find a Store</a>
+            <p class="contact-method-hours">500+ locations worldwide</p>
+          </article>
+          
+          <article class="contact-method-card">
+            <div class="contact-method-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18.375 2.25c-1.182 0-2.156 1.023-2.156 2.25v11.25c0 1.13.968 2.053 2.156 2.053h1.5a.75.75 0 0 0 .75-.75V2.25a.75.75 0 0 0-.75-.75h-1.5ZM3.75 4.5a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1-.75-.75V4.5ZM3 19.5a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 18.75 4.5h-13.5A2.25 2.25 0 0 0 3 6.75v12.75Z" /></svg>
+            </div>
+            <h3 class="contact-method-title">Live Chat</h3>
+            <p class="contact-method-description">Chat with our support team in real-time.</p>
+            <button class="contact-method-link btn btn-primary" id="live-chat-btn">Start Chat</button>
+            <p class="contact-method-hours">Available Mon-Fri: 9am-7pm EST</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section class="contact-form-section" aria-labelledby="contact-form-title">
+      <div class="container">
+        <div class="contact-form-grid">
+          <div class="contact-form-info">
+            <h2 id="contact-form-title" class="section-title">Send Us a Message</h2>
+            <p class="contact-form-description">Fill out the form below and our team will get back to you as soon as possible.</p>
+            
+            <div class="contact-form-benefits">
+              <div class="contact-benefit">
+                <span class="contact-benefit-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                </span>
+                <div>
+                  <strong>Response within 24 hours</strong>
+                  <p>We reply to every message on the next business day.</p>
+                </div>
+              </div>
+              <div class="contact-benefit">
+                <span class="contact-benefit-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.061 12.061 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+                </span>
+                <div>
+                  <strong>Dedicated support team</strong>
+                  <p>Specialists for orders, sizing, and returns.</p>
+                </div>
+              </div>
+              <div class="contact-benefit">
+                <span class="contact-benefit-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" /></svg>
+                </span>
+                <div>
+                  <strong>Order tracking help</strong>
+                  <p>Share your order number for faster assistance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name" class="form-label">First Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="first-name" name="firstName" class="form-input" required autocomplete="given-name" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="last-name" class="form-label">Last Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="last-name" name="lastName" class="form-input" required autocomplete="family-name" aria-required="true">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email" aria-required="true" placeholder="you@example.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" placeholder="+1 (555) 000-0000">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject <span class="required" aria-hidden="true">*</span></label>
+              <select id="subject" name="subject" class="form-select" required aria-required="true">
+                <option value="">Select a topic</option>
+                <option value="general">General Inquiry</option>
+                <option value="orders">Order Status / Tracking</option>
+                <option value="returns">Returns & Exchanges</option>
+                <option value="shipping">Shipping Questions</option>
+                <option value="products">Product Information</option>
+                <option value="stores">Store Locator</option>
+                <option value="wholesale">Wholesale / Partnerships</option>
+                <option value="press">Press / Media</option>
+                <option value="careers">Careers</option>
+                <option value="feedback">Feedback / Complaints</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="order-number" class="form-label">Order Number (if applicable)</label>
+              <input type="text" id="order-number" name="orderNumber" class="form-input" placeholder="NS-123456789" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" class="form-textarea" rows="6" required aria-required="true" placeholder="Tell us how we can help..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <fieldset class="form-checkbox-group">
+                <legend class="form-label">Preferences</legend>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="newsletter" value="true" id="newsletter-checkbox">
+                  <span class="form-checkbox-custom" aria-hidden="true"></span>
+                  <span>Subscribe to newsletter for updates and offers</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="sms" value="true" id="sms-checkbox">
+                  <span class="form-checkbox-custom" aria-hidden="true"></span>
+                  <span>Receive SMS notifications about my order</span>
+                </label>
+              </fieldset>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
+            
+            <p class="form-disclaimer">By submitting this form, you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ Quick Links -->
+    <section class="faq-quick-section" aria-labelledby="faq-quick-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="faq-quick-title" class="section-title">Quick Answers</h2>
+          <p class="section-subtitle">Find instant answers to common questions</p>
+        </header>
+        <div class="faq-quick-grid">
+          <article class="faq-quick-card">
+            <h3 class="faq-quick-question">How do I track my order?</h3>
+            <p class="faq-quick-answer">Use your order number and email at our <a href="track-order.html" class="faq-quick-link">Order Tracking</a> page, or log into your account to see all orders.</p>
+          </article>
+          
+          <article class="faq-quick-card">
+            <h3 class="faq-quick-question">What's your return policy?</h3>
+            <p class="faq-quick-answer">30-day free returns on all unworn items with original packaging. <a href="returns.html" class="faq-quick-link">View full policy</a>.</p>
+          </article>
+          
+          <article class="faq-quick-card">
+            <h3 class="faq-quick-question">How long does shipping take?</h3>
+            <p class="faq-quick-answer">Standard: 3-5 business days. Express: 1-2 business days. Free shipping on orders over $100.</p>
+          </article>
+          
+          <article class="faq-quick-card">
+            <h3 class="faq-quick-question">Do you offer student discounts?</h3>
+            <p class="faq-quick-answer">Yes! Students get 10% off with verification through Student Beans. <a href="student-discount.html" class="faq-quick-link">Verify now</a>.</p>
+          </article>
+          
+          <article class="faq-quick-card">
+            <h3 class="faq-quick-question">How do I find my size?</h3>
+            <p class="faq-quick-answer">Check our <a href="size-guide.html" class="faq-quick-link">Size Guide</a> for detailed measurements and fit recommendations by model.</p>
+          </article>
+          
+          <article class="faq-quick-card">
+            <h3 class="faq-quick-question">Can I modify or cancel my order?</h3>
+            <p class="faq-quick-answer">Orders can be modified within 1 hour of placement. Contact us immediately at <a href="tel:+18005550198" class="faq-quick-link">1-800-555-0198</a>.</p>
+          </article>
+        </div>
+        <div class="faq-quick-cta">
+          <a href="faq.html" class="btn btn-secondary">View All FAQs</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Store Locator Preview -->
+    <section class="store-locator-preview" aria-labelledby="store-locator-title">
+      <div class="container">
+        <div class="store-locator-content">
+          <div class="store-locator-info">
+            <h2 id="store-locator-title" class="section-title">Visit Us In Store</h2>
+            <p class="store-locator-description">Experience Stride in person. Get expert fittings, test products, and enjoy exclusive in-store events.</p>
+            <div class="store-locator-stats">
+              <div class="store-stat">
+                <span class="store-stat-number">500+</span>
+                <span class="store-stat-label">Locations Worldwide</span>
+              </div>
+              <div class="store-stat">
+                <span class="store-stat-number">50+</span>
+                <span class="store-stat-label">Countries</span>
+              </div>
+              <div class="store-stat">
+                <span class="store-stat-number">1,000+</span>
+                <span class="store-stat-label">Expert Fitters</span>
+              </div>
+            </div>
+            <a href="stores.html" class="btn btn-primary btn-lg">Find a Store Near You</a>
+          </div>
+          <div class="store-locator-map" aria-label="Store locations map">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=500&fit=crop" alt="World map showing Stride store locations" loading="lazy" width="800" height="500">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Newsletter CTA -->
+    <section class="newsletter-section" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2 id="newsletter-title" class="newsletter-title">Stay in the Loop</h2>
+          <p class="newsletter-description">Get early access to new releases, exclusive offers, and training tips.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="newsletter-input-group">
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email" required autocomplete="email" aria-label="Email address">
+              <button type="submit" class="btn btn-primary newsletter-submit">Subscribe</button>
+            </div>
+            <p class="newsletter-disclaimer">By subscribing, you agree to our <a href="privacy.html">Privacy Policy</a>. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Stride Home">
+            <span class="footer-logo-icon" aria-hidden="true">NS</span>
+            <span>Stride</span>
+          </a>
+          <p class="footer-tagline">Premium athletic footwear for every athlete. Innovation meets style.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com" class="footer-social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://twitter.com" class="footer-social-link" aria-label="Follow us on Twitter" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-link" aria-label="Follow us on YouTube" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Shop Column -->
+        <div>
+          <h3 class="footer-column-title">Shop</h3>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=men" class="footer-link">Men's Shoes</a></li>
+            <li><a href="shop.html?category=women" class="footer-link">Women's Shoes</a></li>
+            <li><a href="shop.html?category=kids" class="footer-link">Kids' Shoes</a></li>
+            <li><a href="shop.html?category=running" class="footer-link">Running</a></li>
+            <li><a href="shop.html?category=basketball" class="footer-link">Basketball</a></li>
+            <li><a href="shop.html?category=lifestyle" class="footer-link">Lifestyle</a></li>
+            <li><a href="shop.html?category=sale" class="footer-link">Sale</a></li>
+            <li><a href="shop.html?category=new" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Column -->
+        <div>
+          <h3 class="footer-column-title">Support</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="faq.html" class="footer-link">FAQs</a></li>
+            <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+            <li><a href="returns.html" class="footer-link">Returns & Exchanges</a></li>
+            <li><a href="track-order.html" class="footer-link">Track Order</a></li>
+            <li><a href="size-guide.html" class="footer-link">Size Guide</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div>
+          <h3 class="footer-column-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="careers.html" class="footer-link">Careers</a></li>
+            <li><a href="press.html" class="footer-link">Press</a></li>
+            <li><a href="sustainability.html" class="footer-link">Sustainability</a></li>
+            <li><a href="affiliates.html" class="footer-link">Affiliates</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2024 Stride. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="cookies.html" class="footer-legal-link">Cookie Policy</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+        <div class="footer-payments">
+          <span>We accept:</span>
+          <div class="footer-payment-icons">
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Visa"><text x="30" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">VISA</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Mastercard"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">MASTERCARD</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="American Express"><text x="30" y="24" text-anchor="middle" font-size="9" font-weight="bold" fill="currentColor">AMEX</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="PayPal"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">PAYPAL</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Apple Pay"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">APPLE PAY</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Google Pay"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">G PAY</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript - Modular ES6 -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
