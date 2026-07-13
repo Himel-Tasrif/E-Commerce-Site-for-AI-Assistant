@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Stride - Our story, mission, and commitment to innovation in athletic footwear.">
+  <meta name="theme-color" content="#1a1a1a">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | Stride">
+  <meta property="og:description" content="Our story, mission, and commitment to innovation in athletic footwear.">
+  <meta property="og:image" content="images/og-about.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Stride">
+  <meta name="twitter:description" content="Our story, mission, and commitment to innovation in athletic footwear.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  
+  <!-- CSS - Modular Architecture -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/product-grid.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/newsletter.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/pages.css">
+  
+  <title>About Us | Stride</title>
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="header" id="header" role="banner">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="header-nav-link">Home</a>
+        <a href="shop.html" class="header-nav-link">Shop</a>
+        <a href="shop.html?category=men" class="header-nav-link">Men</a>
+        <a href="shop.html?category=women" class="header-nav-link">Women</a>
+        <a href="shop.html?category=kids" class="header-nav-link">Kids</a>
+        <a href="shop.html?category=sale" class="header-nav-link">Sale</a>
+        <a href="about.html" class="header-nav-link active" aria-current="page">About</a>
+        <a href="contact.html" class="header-nav-link">Contact</a>
+      </nav>
+      
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="header-action-btn" aria-label="Search products" id="search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </button>
+        
+        <button class="header-action-btn" aria-label="User account" id="account-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+        </button>
+        
+        <button class="header-action-btn" aria-label="Shopping cart" id="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          <span class="header-cart-count" id="cart-count" aria-label="0 items in cart">0</span>
+        </button>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="mobile-menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-open-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" id="menu-close-icon" style="display: none;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <nav class="mobile-menu-nav">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+        <a href="shop.html" class="mobile-menu-link">Shop</a>
+        <a href="shop.html?category=men" class="mobile-menu-link">Men</a>
+        <a href="shop.html?category=women" class="mobile-menu-link">Women</a>
+        <a href="shop.html?category=kids" class="mobile-menu-link">Kids</a>
+        <a href="shop.html?category=sale" class="mobile-menu-link">Sale</a>
+        <a href="about.html" class="mobile-menu-link active" aria-current="page">About</a>
+        <a href="contact.html" class="mobile-menu-link">Contact</a>
+      </nav>
+      <div class="mobile-menu-divider"></div>
+      <div class="mobile-menu-actions">
+        <button class="btn btn-secondary" style="flex: 1;">Sign In</button>
+        <button class="btn btn-primary" style="flex: 1;">Create Account</button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+    <div class="modal" style="max-width: 600px;">
+      <div class="modal-header">
+        <h2 id="search-modal-title" class="modal-title">Search Products</h2>
+        <button class="modal-close" aria-label="Close search" id="search-close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="search-form" id="search-form" role="search">
+          <div class="form-group">
+            <label for="search-input" class="sr-only">Search products</label>
+            <div style="position: relative;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--color-gray-400); pointer-events: none;" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+              <input 
+                type="search" 
+                id="search-input" 
+                class="form-input" 
+                placeholder="Search for shoes, sneakers, running..."
+                style="padding-left: 48px;"
+                autocomplete="off"
+                aria-label="Search products"
+              >
+            </div>
+          </div>
+        </form>
+        <div class="search-suggestions" id="search-suggestions" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cart-sidebar" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-sidebar-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar-content">
+      <div class="cart-header">
+        <h2 id="cart-title" class="cart-title">Shopping Cart</h2>
+        <button class="cart-close" aria-label="Close cart" id="cart-close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="cart-body" id="cart-body">
+        <div class="cart-empty" id="cart-empty">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" style="width: 64px; height: 64px; margin-bottom: 1rem; color: var(--color-gray-300);">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          <p>Your cart is empty</p>
+          <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+        </div>
+        <div class="cart-items" id="cart-items" style="display: none;"></div>
+      </div>
+      <div class="cart-footer" id="cart-footer" style="display: none;">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-shipping">
+          <span>Shipping</span>
+          <span>Calculated at checkout</span>
+        </div>
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
+        <a href="shop.html" class="btn btn-secondary btn-block">Continue Shopping</a>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-label="Notifications"></div>
+  
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- About Hero -->
+    <section class="about-hero" aria-labelledby="about-hero-title">
+      <div class="container">
+        <div class="about-hero-content">
+          <h1 id="about-hero-title" class="about-hero-title">Our Story</h1>
+          <p class="about-hero-subtitle">Innovation meets style. We're on a mission to bring the best athletic footwear to every athlete.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Mission Section -->
+    <section class="mission-section" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="mission-grid">
+          <div class="mission-content">
+            <h2 id="mission-title" class="section-title">Our Mission</h2>
+            <div class="mission-text">
+              <p>At Stride, we believe that every athlete deserves the best. Whether you're a professional runner chasing a world record or someone taking their first steps on a fitness journey, our shoes are engineered to help you perform at your peak.</p>
+              <p>Founded in 2010 by a team of passionate athletes and engineers, we set out to revolutionize the footwear industry by combining cutting-edge technology with timeless design. Today, we're proud to serve millions of athletes worldwide.</p>
+              <p>Our commitment goes beyond making great shoes. We're dedicated to sustainability, ethical manufacturing, and giving back to the communities that support us.</p>
+            </div>
+          </div>
+          <div class="mission-image">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop" alt="Stride team working on shoe design" loading="lazy" width="800" height="600">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="values-section" aria-labelledby="values-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="values-title" class="section-title">Our Values</h2>
+          <p class="section-subtitle">The principles that guide everything we do</p>
+        </header>
+        <div class="values-grid">
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 21.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394Z" /></svg>
+            </div>
+            <h3 class="value-title">Innovation</h3>
+            <p class="value-description">We constantly push boundaries with new materials, technologies, and designs to help athletes perform better.</p>
+          </article>
+          
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.77m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /></svg>
+            </div>
+            <h3 class="value-title">Community</h3>
+            <p class="value-description">We build connections through sport, supporting local communities and inspiring the next generation of athletes.</p>
+          </article>
+          
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.227l-1.591-1.591M12 5.25H3m4.227 4.227l1.591-1.591M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" /></svg>
+            </div>
+            <h3 class="value-title">Sustainability</h3>
+            <p class="value-description">Committed to reducing our environmental footprint through recycled materials, renewable energy, and circular design.</p>
+          </article>
+          
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" /></svg>
+            </div>
+            <h3 class="value-title">Quality</h3>
+            <p class="value-description">Every shoe undergoes rigorous testing to ensure durability, comfort, and performance that lasts.</p>
+          </article>
+          
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
+            </div>
+            <h3 class="value-title">Integrity</h3>
+            <p class="value-description">We do business the right way—ethical sourcing, fair labor practices, and transparency in everything we do.</p>
+          </article>
+          
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 12 21c2.3 0 4.404-.879 5.912-2.49l-1.429-1.428A6.987 6.987 0 0 0 12 18c-1.82 0-3.483-.64-4.732-1.733l-1.43 1.43A8.953 8.953 0 0 0 12 21c2.687 0 5.12-1.03 6.888-2.853.476.097.96.18 1.45.18 2.081 0 3.978-.709 5.427-1.94 2.015-1.717 2.499-4.546 1.099-6.911A82.113 82.113 0 0 0 12 6.042Z" /></svg>
+            </div>
+            <h3 class="value-title">Performance</h3>
+            <p class="value-description">Engineered for athletes who demand the best. Our shoes are tested by pros, proven on the field.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Timeline Section -->
+    <section class="timeline-section" aria-labelledby="timeline-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="timeline-title" class="section-title">Our Journey</h2>
+          <p class="section-subtitle">Key milestones that shaped who we are today</p>
+        </header>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2010">2010</time>
+              <h3 class="timeline-title">Founded</h3>
+              <p class="timeline-description">Stride was founded in a small garage by three former collegiate athletes who believed everyone deserves premium performance footwear.</p>
+            </div>
+          </article>
+          
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2012">2012</time>
+              <h3 class="timeline-title">First Breakthrough</h3>
+              <p class="timeline-description">Launched our proprietary AirFlow cushioning technology, revolutionizing comfort in running shoes and winning our first industry award.</p>
+            </div>
+          </article>
+          
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2015">2015</time>
+              <h3 class="timeline-title">Global Expansion</h3>
+              <p class="timeline-description">Opened flagship stores in New York, London, and Tokyo. Expanded distribution to 50+ countries worldwide.</p>
+            </div>
+          </article>
+          
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2018">2018</time>
+              <h3 class="timeline-title">Sustainability Commitment</h3>
+              <p class="timeline-description">Pledged to use 50% recycled materials in all products by 2025. Launched the ReNew collection made from 100% recycled polyester.</p>
+            </div>
+          </article>
+          
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2021">2021</time>
+              <h3 class="timeline-title">Smart Footwear Launch</h3>
+              <p class="timeline-description">Introduced the first connected running shoes with real-time performance tracking, coaching feedback, and injury prevention insights.</p>
+            </div>
+          </article>
+          
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <time class="timeline-year" datetime="2024">2024</time>
+              <h3 class="timeline-title">Carbon Neutral Operations</h3>
+              <p class="timeline-description">Achieved carbon neutrality across all manufacturing facilities and corporate offices. Committed to net-zero by 2030.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="team-section" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="team-title" class="section-title">Leadership Team</h2>
+          <p class="section-subtitle">Meet the visionaries behind Stride</p>
+        </header>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-image">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Sarah Chen, CEO" loading="lazy" width="400" height="400">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Sarah Chen</h3>
+              <p class="team-role">Chief Executive Officer</p>
+              <p class="team-bio">Former Olympic trialist turned business leader. 15+ years in sports technology and brand building.</p>
+            </div>
+          </article>
+          
+          <article class="team-card">
+            <div class="team-image">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Marcus Johnson, CTO" loading="lazy" width="400" height="400">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Marcus Johnson</h3>
+              <p class="team-role">Chief Technology Officer</p>
+              <p class="team-bio">Pioneer in biomechanics and material science. Holds 23 patents in footwear technology.</p>
+            </div>
+          </article>
+          
+          <article class="team-card">
+            <div class="team-image">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face" alt="Elena Rodriguez, CPO" loading="lazy" width="400" height="400">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Elena Rodriguez</h3>
+              <p class="team-role">Chief Product Officer</p>
+              <p class="team-bio">Award-winning designer with background in industrial design and sustainable manufacturing.</p>
+            </div>
+          </article>
+          
+          <article class="team-card">
+            <div class="team-image">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="David Park, CMO" loading="lazy" width="400" height="400">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">David Park</h3>
+              <p class="team-role">Chief Marketing Officer</p>
+              <p class="team-bio">Brand strategist who built global campaigns for major sports leagues and Olympic athletes.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-content">
+          <h2 id="cta-title" class="cta-title">Join Our Journey</h2>
+          <p class="cta-text">Be part of the future of athletic footwear. Shop our latest collection or join our team.</p>
+          <div class="cta-actions">
+            <a href="shop.html" class="btn btn-primary btn-lg">Shop Now</a>
+            <a href="careers.html" class="btn btn-secondary btn-lg">View Careers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Stride Home">
+            <span class="footer-logo-icon" aria-hidden="true">NS</span>
+            <span>Stride</span>
+          </a>
+          <p class="footer-tagline">Premium athletic footwear for every athlete. Innovation meets style.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com" class="footer-social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://twitter.com" class="footer-social-link" aria-label="Follow us on Twitter" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-link" aria-label="Follow us on YouTube" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Shop Column -->
+        <div>
+          <h3 class="footer-column-title">Shop</h3>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=men" class="footer-link">Men's Shoes</a></li>
+            <li><a href="shop.html?category=women" class="footer-link">Women's Shoes</a></li>
+            <li><a href="shop.html?category=kids" class="footer-link">Kids' Shoes</a></li>
+            <li><a href="shop.html?category=running" class="footer-link">Running</a></li>
+            <li><a href="shop.html?category=basketball" class="footer-link">Basketball</a></li>
+            <li><a href="shop.html?category=lifestyle" class="footer-link">Lifestyle</a></li>
+            <li><a href="shop.html?category=sale" class="footer-link">Sale</a></li>
+            <li><a href="shop.html?category=new" class="footer-link">New Arrivals</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Column -->
+        <div>
+          <h3 class="footer-column-title">Support</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="faq.html" class="footer-link">FAQs</a></li>
+            <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+            <li><a href="returns.html" class="footer-link">Returns & Exchanges</a></li>
+            <li><a href="track-order.html" class="footer-link">Track Order</a></li>
+            <li><a href="size-guide.html" class="footer-link">Size Guide</a></li>
+            <li><a href="warranty.html" class="footer-link">Warranty</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div>
+          <h3 class="footer-column-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="careers.html" class="footer-link">Careers</a></li>
+            <li><a href="press.html" class="footer-link">Press</a></li>
+            <li><a href="sustainability.html" class="footer-link">Sustainability</a></li>
+            <li><a href="affiliates.html" class="footer-link">Affiliates</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2024 Stride. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="cookies.html" class="footer-legal-link">Cookie Policy</a>
+          <a href="accessibility.html" class="footer-legal-link">Accessibility</a>
+        </div>
+        <div class="footer-payments">
+          <span>We accept:</span>
+          <div class="footer-payment-icons">
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Visa"><text x="30" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">VISA</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Mastercard"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">MASTERCARD</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="American Express"><text x="30" y="24" text-anchor="middle" font-size="9" font-weight="bold" fill="currentColor">AMEX</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="PayPal"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">PAYPAL</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Apple Pay"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">APPLE PAY</text></svg>
+            <svg class="footer-payment-icon" viewBox="0 0 60 36" aria-label="Google Pay"><text x="30" y="24" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">G PAY</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript - Modular ES6 -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
