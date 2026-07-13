@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | Stride</title>
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      <nav class="header-nav" aria-label="Account">
+        <a href="shop.html">Shop</a>
+        <a href="orders.html">My Orders</a>
+      </nav>
+      <div class="header-actions">
+        <div id="header-account" class="header-account"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="account-page container">
+    <h1 class="account-title">My Account</h1>
+    <p class="account-lead" id="account-help"></p>
+    <div id="account-error" class="account-alert" hidden></div>
+    <div id="account-loading" class="account-loading">Loading your account…</div>
+    <div id="account-content" hidden>
+      <section class="account-card">
+        <h2>Profile</h2>
+        <dl class="account-dl">
+          <div><dt>Name</dt><dd id="acc-name"></dd></div>
+          <div><dt>Customer ID</dt><dd id="acc-number" class="mono"></dd></div>
+          <div><dt>Email</dt><dd id="acc-email"></dd></div>
+          <div><dt>Phone</dt><dd id="acc-phone"></dd></div>
+          <div><dt>Member since</dt><dd id="acc-created"></dd></div>
+        </dl>
+        <p class="account-hint" id="account-where"></p>
+      </section>
+      <section class="account-card">
+        <div class="account-card-head">
+          <h2>Recent orders</h2>
+          <a href="orders.html" class="btn btn-ghost btn-sm">View all</a>
+        </div>
+        <div id="acc-orders"></div>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="js/account.js"></script>
+</body>
+</html>
