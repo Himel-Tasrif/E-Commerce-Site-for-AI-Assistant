@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | Stride</title>
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      <div class="header-actions">
+        <a href="shop.html" class="btn btn-ghost btn-sm">Continue shopping</a>
+        <div id="header-account" class="header-account"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <h1>Sign in</h1>
+      <p class="auth-lead">Welcome back. Sign in to continue where you left off.</p>
+      <div id="auth-alert" hidden></div>
+      <form id="login-form" class="auth-form">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" id="email" name="email" type="email" required autocomplete="email">
+
+        <label class="form-label" for="password">Password</label>
+        <input class="form-input" id="password" name="password" type="password" required autocomplete="current-password">
+
+        <button type="submit" class="btn btn-primary" id="login-btn">Sign in</button>
+      </form>
+      <p class="auth-footer">
+        New here?
+        <a id="register-link" href="register.html">Create an account</a>
+      </p>
+      <p class="auth-hint">Demo auth — stored in Supabase. Swap for real auth later without changing page flow.</p>
+    </div>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
