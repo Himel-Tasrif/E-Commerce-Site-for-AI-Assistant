@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders | Stride</title>
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      <nav class="header-nav" aria-label="Orders">
+        <a href="account.html">My Account</a>
+        <a href="shop.html">Shop</a>
+      </nav>
+      <div class="header-actions">
+        <div id="header-account" class="header-account"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="account-page container">
+    <p class="account-cus-banner" id="orders-cus-banner"></p>
+    <h1 class="account-title">My Orders</h1>
+    <p class="account-lead">Track payment and delivery for your Stride orders.</p>
+    <div id="orders-error" class="account-alert" hidden></div>
+    <div id="orders-loading" class="account-loading">Loading orders…</div>
+    <div id="orders-list" hidden></div>
+  </main>
+  <script type="module" src="js/orders-page.js"></script>
+</body>
+</html>
