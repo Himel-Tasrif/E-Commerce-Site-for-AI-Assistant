@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | Stride</title>
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      <nav class="header-nav" aria-label="Main">
+        <a href="index.html" class="header-nav-link">Home</a>
+        <a href="shop.html" class="header-nav-link">Shop</a>
+        <a href="shop.html?category=men" class="header-nav-link">Men</a>
+        <a href="shop.html?category=women" class="header-nav-link">Women</a>
+        <a href="contact.html" class="header-nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-action-btn" aria-label="Shopping cart" id="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" /></svg>
+          <span class="header-cart-count" id="cart-count">0</span>
+        </button>
+        <div id="header-account" class="header-account"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart modal (shared with homepage pattern) -->
+  <div class="modal-overlay" id="cart-modal" role="dialog" aria-modal="true">
+    <div class="modal" style="max-width: 480px; max-height: 100vh; height: 100vh; border-radius: 0; margin-left: auto;">
+      <div class="modal-header">
+        <h2 class="modal-title">Shopping Cart</h2>
+        <button class="modal-close" aria-label="Close cart" id="cart-close">×</button>
+      </div>
+      <div class="modal-body" style="flex: 1; overflow-y: auto;">
+        <div id="cart-items"></div>
+      </div>
+      <div class="modal-footer" id="cart-footer" style="display: none;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+          <span>Total</span>
+          <strong id="cart-total">—</strong>
+        </div>
+        <button class="btn btn-primary" style="width: 100%;" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="product-page">
+    <div class="container">
+      <p class="product-breadcrumb"><a href="shop.html">Shop</a> / <span id="crumb-name">Product</span></p>
+
+      <div id="product-loading" class="product-loading">Loading product…</div>
+      <div id="product-missing" class="product-missing" hidden>
+        <h1>Product not found</h1>
+        <p>This item may have been removed.</p>
+        <a href="shop.html" class="btn btn-primary">Back to shop</a>
+      </div>
+
+      <div id="product-detail" class="product-detail" hidden>
+        <div class="product-gallery">
+          <img id="product-main-image" src="" alt="">
+          <div id="product-thumbs" class="product-thumbs"></div>
+        </div>
+        <div class="product-info">
+          <p class="product-brand" id="product-brand"></p>
+          <h1 class="product-name" id="product-name"></h1>
+          <p class="product-category" id="product-category"></p>
+          <p class="product-price" id="product-price"></p>
+          <p class="product-desc" id="product-desc"></p>
+
+          <div class="product-field" id="size-field">
+            <label class="form-label">Size</label>
+            <div id="size-options" class="option-row"></div>
+          </div>
+
+          <div class="product-field">
+            <label class="form-label" for="qty-input">Quantity</label>
+            <input class="form-input" id="qty-input" type="number" min="1" value="1" style="max-width: 100px;">
+          </div>
+
+          <button type="button" class="btn btn-primary btn-lg" id="product-add-cart">Add to Cart</button>
+          <a href="shop.html" class="btn btn-ghost" style="margin-top: 0.75rem;">Continue shopping</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/product-page.js"></script>
+</body>
+</html>
