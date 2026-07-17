@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create account | Stride</title>
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Stride Home">
+        <span class="header-logo-icon" aria-hidden="true">S</span>
+        <span>Stride</span>
+      </a>
+      <div class="header-actions">
+        <a href="shop.html" class="btn btn-ghost btn-sm">Continue shopping</a>
+        <div id="header-account" class="header-account"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <h1>Create account</h1>
+      <p class="auth-lead">Set up a demo account. You’ll sign in on the next step.</p>
+      <div id="auth-alert" hidden></div>
+      <form id="register-form" class="auth-form">
+        <label class="form-label" for="name">Full name</label>
+        <input class="form-input" id="name" name="name" type="text" required autocomplete="name">
+
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" id="email" name="email" type="email" required autocomplete="email">
+
+        <label class="form-label" for="phone">Phone</label>
+        <input class="form-input" id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="01XXXXXXXXX">
+
+        <label class="form-label" for="password">Password</label>
+        <input class="form-input" id="password" name="password" type="password" required minlength="4" autocomplete="new-password">
+
+        <button type="submit" class="btn btn-primary" id="register-btn">Create account</button>
+      </form>
+      <p class="auth-footer">
+        Already have an account?
+        <a id="login-link" href="login.html">Sign in</a>
+      </p>
+    </div>
+  </main>
+
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>
